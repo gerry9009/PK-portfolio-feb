@@ -1,0 +1,130 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 1rem;
+  width: 100%;
+  height: 8vh;
+  z-index: 10;
+}
+
+.header-logo {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--white-color);
+  transition: all 0.6s ease-in-out;
+}
+
+.header-logo:hover {
+  color: var(--second-color);
+  border: 1px solid var(--second-color);
+}
+
+.header-checkbox {
+  display: none;
+}
+
+.header-label {
+  width: 30px;
+  display: block;
+  cursor: pointer;
+}
+
+.checkbox-gomb {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-gomb::after,
+.checkbox-gomb::before,
+.checkbox-vonal {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--white-color);
+  margin: 3px 0;
+  transition: all 0.6s ease-out;
+}
+
+.header-label:hover .checkbox-vonal {
+  transform: scaleX(0.8);
+}
+
+.header-label:hover .checkbox-gomb::after,
+.header-label:hover .checkbox-gomb::before {
+  transform: scaleX(0.6);
+}
+
+.header-kontener {
+  position: absolute;
+  background: var(--primary-color);
+  top: 8vh;
+  width: 100vw;
+  height: 92vh;
+  left: 100vw;
+  flex-direction: column;
+  transition: all 0.6s ease;
+  z-index: 1;
+  /*transform: translate(100vw);*/
+}
+
+/* tilde karakter -> utód, testvér kombinátor  */
+.header-checkbox:checked ~ .header-kontener {
+  left: 0;
+  /*transform: translate(0);*/
+}
+
+.header-kontener {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-elem {
+  display: block;
+  width: 100vw;
+  text-align: center;
+  transition: all 0.6s ease;
+  padding: 1rem;
+}
+
+.header-elem:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  header {
+    padding: 0 1rem;
+    height: auto;
+  }
+  .header-label {
+    display: none;
+  }
+
+  .header-kontener {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    /*transform: translate(0);*/
+    transition: auto;
+  }
+
+  .header-elem {
+    width: auto;
+    min-width: 130px;
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

@@ -19,17 +19,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
   </head>
   <body>
     <!--    HEADER  -->
     <header>
-      <a href="#fooldal" class="logo">td</a>
-      <nav>
-        <ul>
-          <li><a href="#fooldal">Főoldal</a></li>
-          <li><a href="#rolam">Rólam</a></li>
-          <li><a href="#portfolio">Portfólió</a></li>
-          <li><a href="#kapcsolat">Kapcsolat</a></li>
+      <a href="#fooldal" class="header-logo">td</a>
+      <nav class="header-navigacio">
+        <!--  checkbox  -->
+        <input type="checkbox" id="header-checkbox" class="header-checkbox" />
+
+        <label for="header-checkbox" class="header-label">
+          <span class="checkbox-gomb">
+            <span class="checkbox-vonal"></span>
+          </span>
+        </label>
+
+        <ul class="header-kontener">
+          <li><a class="header-elem" href="#fooldal">Főoldal</a></li>
+          <li><a class="header-elem" href="#rolam">Rólam</a></li>
+          <li><a class="header-elem" href="#portfolio">Portfólió</a></li>
+          <li><a class="header-elem" href="#kapcsolat">Kapcsolat</a></li>
         </ul>
       </nav>
     </header>
@@ -68,6 +88,7 @@
 
       <!--    Portfólió     -->
       <section id="portfolio" class="portfolio">
+        <h2>Portfólió</h2>
         <div class="kontener">
           <img src="./assets/project.jpeg" alt="Szuper weboldal" />
           <p>
@@ -108,6 +129,7 @@
 
       <!--    Kapcsolat     -->
       <section id="kapcsolat" class="kapcsolat">
+        <h2>Kapcsolat</h2>
         <form class="form" action="">
           <input type="text" name="nev" id="nev" placeholder="Név" />
           <input type="email" name="email" id="email" placeholder="Email" />
