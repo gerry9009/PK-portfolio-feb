@@ -30,6 +30,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/fooldal.css" />
   </head>
   <body>
     <!--    HEADER  -->
@@ -61,7 +62,7 @@
         <div class="fooldal-szoveg">
           <h1>Fejlesztő Feri</h1>
           <h2>Frontend fejlesztő</h2>
-          <a href="#kapcsolat">Kapcsolat</a>
+          <a href="#kapcsolat" class="fooldal-gomb">Kapcsolat</a>
         </div>
         <div class="fooldal-kep">
           <img src="./assets/portfolio.png" alt="portfolio" />
@@ -130,7 +131,11 @@
       <!--    Kapcsolat     -->
       <section id="kapcsolat" class="kapcsolat">
         <h2>Kapcsolat</h2>
-        <form class="form" action="">
+        <form
+          class="form"
+          action="https://formspree.io/f/xeqwlvkp"
+          method="POST"
+        >
           <input type="text" name="nev" id="nev" placeholder="Név" />
           <input type="email" name="email" id="email" placeholder="Email" />
           <textarea name="uzenet" id="uzenet" placeholder="Üzenet"></textarea>
@@ -138,13 +143,13 @@
         </form>
         <ul class="social">
           <li class="social-elem">
-            <a href="http://"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
           </li>
           <li class="social-elem">
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
           </li>
           <li class="social-elem">
-            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
           </li>
         </ul>
       </section>

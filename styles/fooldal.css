@@ -1,0 +1,162 @@
+.fooldal {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  border-bottom: 1px solid var(--white-color);
+  overflow: hidden;
+}
+
+.fooldal-szoveg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.fooldal h2 {
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.fooldal-gomb {
+  padding: 0.5rem 1.5rem;
+  margin: 2rem 0;
+  border: 2px solid var(--white-color);
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.fooldal-gomb:hover {
+  border: 2px solid var(--second-color);
+  background: var(--second-color);
+}
+
+.fooldal-kep {
+  display: none;
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+  .fooldal h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    transition: all 0.8s ease;
+  }
+
+  .fooldal h2 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .fooldal-gomb {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border: 3px solid var(--white-color);
+    transition: all 0.8s ease;
+  }
+
+  .fooldal-gomb:hover {
+    border: 3px solid var(--second-color);
+  }
+}
+@media (min-width: 992px) {
+  .fooldal-szoveg {
+    width: 50%;
+  }
+
+  .fooldal-szoveg:hover .fooldal-gomb {
+    border: 3px solid var(--second-color);
+  }
+
+  .fooldal-szoveg:hover h1 {
+    color: var(--second-color);
+  }
+  .fooldal-szoveg h1 {
+    position: relative;
+  }
+
+  .fooldal-szoveg h1::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.8s all ease-in-out;
+  }
+
+  .fooldal-szoveg:hover h1::after {
+    transform: scaleX(1);
+  }
+
+  .fooldal-kep {
+    display: flex;
+    justify-content: center;
+    filter: grayscale(1);
+    width: 50%;
+    transition: all 1s ease;
+  }
+
+  .fooldal-kep img {
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  .fooldal-kep:hover {
+    filter: grayscale(0);
+  }
+
+  .fooldal-kep::before,
+  .fooldal-kep::after {
+    content: "";
+    width: 5px;
+    height: 2000px;
+    position: absolute;
+    background: var(--second-color);
+    transform: rotate(40deg) scale(0);
+    transform-origin: bottom right;
+    bottom: -20px;
+    left: -150px;
+    transition: all 0.6s ease;
+  }
+  .fooldal-kep::after {
+    background: var(--white-color);
+    left: -120px;
+    width: 3px;
+    transition: all 1s ease;
+  }
+
+  .fooldal-kep:hover::before,
+  .fooldal-kep:hover::after {
+    transform: rotate(40deg) scale(1);
+    transform-origin: bottom left;
+  }
+}
+@media (min-width: 1200px) {
+  .fooldal-kep::before,
+  .fooldal-kep::after {
+    left: -100px;
+    width: 7px;
+  }
+
+  .fooldal-kep::after {
+    background: var(--white-color);
+    left: -50px;
+    width: 5px;
+  }
+}
+@media (min-width: 1400px) {
+}
