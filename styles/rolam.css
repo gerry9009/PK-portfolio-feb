@@ -1,0 +1,134 @@
+.rolam {
+  padding: 2rem;
+}
+
+.rolam-bemutatkozas {
+  text-align: center;
+}
+
+.rolam:hover h2 {
+  color: var(--second-color);
+}
+
+.rolam:hover span {
+  color: var(--second-color);
+}
+
+.rolam span {
+  position: relative;
+  font-style: italic;
+  transition: 0.8s all ease;
+}
+
+.rolam-bemutatkozas h2 {
+  letter-spacing: 0.4rem;
+  font-size: 2rem;
+  font-style: italic;
+  transition: 0.8s all ease;
+}
+
+.rolam-bemutatkozas h3 {
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+
+.rolam-bemutatkozas p {
+  margin-top: 3rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+.rolam-tech {
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 4rem;
+  flex-wrap: wrap;
+}
+
+.rolam-tech p {
+  transition: 0.6s all ease;
+}
+
+.rolam-tech:hover p:first-child {
+  color: rgba(234, 88, 39);
+}
+
+.rolam-tech:hover p:nth-child(2) {
+  color: rgba(0, 74, 224);
+}
+
+.rolam-tech:hover p:last-child {
+  color: rgba(240, 167, 62);
+}
+
+.rolam-tech p {
+  position: relative;
+}
+
+.rolam-tech i {
+  transition: 1s all ease;
+  position: relative;
+  background: var(--black-color);
+}
+
+.rolam-tech p::before {
+  position: absolute;
+  content: "HTML";
+  font-size: 1rem;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  text-align: center;
+  color: var(--white-color);
+}
+
+.rolam-tech p:hover i {
+  transform: translateY(-30px);
+}
+
+.rolam-tech p:nth-child(2)::before {
+  content: "CSS";
+}
+
+.rolam-tech p:last-child::before {
+  content: "JS";
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+  .rolam {
+    padding: 5rem;
+    min-height: 100vh;
+  }
+
+  .rolam-bemutatkozas h2 {
+    letter-spacing: 0.4rem;
+    font-size: 3rem;
+  }
+
+  .rolam-bemutatkozas h3 {
+    letter-spacing: 0.4rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .rolam-bemutatkozas p {
+    margin: 3rem;
+    letter-spacing: 0.2rem;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .rolam-tech {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
