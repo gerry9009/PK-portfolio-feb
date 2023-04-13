@@ -34,11 +34,16 @@ h1 {
   letter-spacing: 0.2rem;
   font-weight: 500;
   font-size: 1.2rem;
+  transition: border 0.8s ease, background 0.8s ease;
 }
 
 .fooldal-gomb:hover {
   border: 2px solid var(--second-color);
   background: var(--second-color);
+}
+
+.fooldal-gomb:focus {
+  transform: scale(0.95);
 }
 
 .fooldal-kep {
@@ -63,7 +68,6 @@ h1 {
     font-size: 1.5rem;
     padding: 1rem 3rem;
     border: 3px solid var(--white-color);
-    transition: all 0.8s ease;
   }
 
   .fooldal-gomb:hover {

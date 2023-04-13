@@ -1,8 +1,10 @@
 :root {
   --primary-color: rgb(20, 20, 20);
   --second-color: rgb(194, 28, 28);
+  --second-light-color: rgb(243, 8, 8);
   --black-color: rgb(0, 0, 0);
   --white-color: rgb(255, 255, 255);
+  --light-gray-color: rgb(240, 240, 240);
 }
 
 html {
